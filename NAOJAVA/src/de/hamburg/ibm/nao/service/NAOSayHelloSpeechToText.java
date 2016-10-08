@@ -9,6 +9,8 @@ import com.ibm.watson.developer_cloud.speech_to_text.v1.model.SpeechResults;
 import com.ibm.watson.developer_cloud.speech_to_text.v1.model.Transcript;
 
 /**
+ * My class uses Watson API for Speech to Text and NAO robot for Text to Speech.
+ * 
  * NAO Libraries https://github.com/hbxu/hello-nao/raw/master/lib/java-naoqi-sdk-2.1.4.13-win32-vs2010.jar
  * Watson Library https://github.com/watson-developer-cloud/java-sdk/releases/download/parent-3.4.0/java-sdk-3.4.0-jar-with-dependencies.jar
  * 
