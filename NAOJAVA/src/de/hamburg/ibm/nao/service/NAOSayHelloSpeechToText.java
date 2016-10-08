@@ -29,12 +29,13 @@ public class NAOSayHelloSpeechToText {
 			application.start();
 
 			SpeechToText service = new SpeechToText();
-			service.setUsernameAndPassword("3cd51759-XXXX-4872-a715-c1070dd0f8d8", "IcIdnJhvlXXX");
+			// No valid credentials
+			service.setUsernameAndPassword("3cd51759-484d-4872-a715-c1070dd0f8d9", "IcIdnJhvlVWM");
 			service.setEndPoint("https://stream.watsonplatform.net/speech-to-text/api");
 
-			// Erzeugt durch Start->search programs and files-> type in
-			// 'soundrecorder /file goal.wav'
-			File audio = new File("/goal.wav");
+			// Created using Start->search programs and files-> type in 'soundrecorder /file goal.wav'
+			String filePath = NAOSayHelloSpeechToText.class.getResource("goal.wav").getPath();
+			File audio = new File(filePath);
 
 			SpeechResults transcript = service.recognize(audio).execute();
 
@@ -42,10 +43,10 @@ public class NAOSayHelloSpeechToText {
 			String myText = transcript2.getAlternatives().get(0).getTranscript();
 
 			ALTextToSpeech ttsAnswer = new ALTextToSpeech(application.session());
-			System.err.println("Es wurde aufgenommen: "+myText);
+			System.err.println("It was recorded: "+myText);
 			ttsAnswer.say(myText);
 
-//			// Spracherkennung, hat bei mir Lokal nicht funktioniert
+//			// Speech recognition didn't work locally
 //			 ALSpeechRecognition sd = new ALSpeechRecognition (application.session());
 //			 sd.setLanguage("English");
 //			
@@ -62,7 +63,7 @@ public class NAOSayHelloSpeechToText {
 //			 ReactToEventSpeechDetected reactor = new
 //			 ReactToEventSpeechDetected();
 //			 reactor.run(application.session());
-//			 // 2 Minuten Spracherkennung
+//			 // 2 mins speech recognition
 //			 Thread.sleep(1000*60*2);
 //			
 //			 sd.unsubscribe("Test_ASR");
