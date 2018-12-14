@@ -52,7 +52,7 @@ public class ReactToEventSpeechDetected {
 						ar.stopMicrophonesRecording();
 
 						SpeechToText service = new SpeechToText();
-						service.setUsernameAndPassword("3cd51759-484d-4872-a715-c1070dd0XXXX", "IcIdnJhvXXXX");
+						service.setUsernameAndPassword("", "");
 
 						File audio = new File("C:/Users/XXX/Desktop/test.wav");
 
