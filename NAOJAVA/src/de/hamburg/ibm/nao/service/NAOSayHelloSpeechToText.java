@@ -32,7 +32,7 @@ public class NAOSayHelloSpeechToText {
 
 			SpeechToText service = new SpeechToText();
 			// No valid credentials
-			service.setUsernameAndPassword("3cd51759-484d-4872-a715-c1070dd0f8d9", "IcIdnJhvlVWM");
+			service.setUsernameAndPassword("", "");
 			service.setEndPoint("https://stream.watsonplatform.net/speech-to-text/api");
 
 			// Created using Start->search programs and files-> type in 'soundrecorder /file goal.wav'
